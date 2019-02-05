@@ -40,10 +40,15 @@ AudioConnection          patchCord1(playWav1, 0, audioOutput, 0);
 AudioConnection          patchCord2(playWav1, 1, audioOutput, 1);
 AudioControlSGTL5000     sgtl5000_1;
 
-// Use these with the Teensy Audio Shield
+// Use these with the Teensy 3.x Audio Shield
 #define SDCARD_CS_PIN    10
-#define SDCARD_MOSI_PIN  7
-#define SDCARD_SCK_PIN   14
+#define SDCARD_MOSI_PIN  11
+#define SDCARD_SCK_PIN   13
+
+// Use these with the Teensy 3.x Audio Shield
+//#define SDCARD_CS_PIN    10
+//#define SDCARD_MOSI_PIN  7
+//#define SDCARD_SCK_PIN   14
 
 // Use these with the Teensy 3.5 & 3.6 SD card
 //#define SDCARD_CS_PIN    BUILTIN_SDCARD
@@ -112,4 +117,3 @@ void loop() {
   playFile("SDTEST4.WAV");
   delay(1500);
 }
-
